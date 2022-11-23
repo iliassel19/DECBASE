@@ -1,0 +1,111 @@
+@media screen and (max-width: 68.75em) {
+  .navigation-container {
+    margin-inline: 4.8rem;
+  }
+  .navigation__ctas {
+    display: none;
+  }
+}
+@media screen and (max-width: 50em) {
+  .navigation-container {
+    margin-inline: 2.4rem;
+  }
+
+  /* NAVIGATION HAMBURGER STYLES */
+  .hamburger {
+    display: block;
+    width: 3rem;
+    height: 2px;
+    background-color: var(--clrs-neutral-800);
+    position: relative;
+    z-index: 30;
+    transition: transform 250ms;
+  }
+  .hamburger::after,
+  .hamburger::before {
+    content: "";
+    width: 3rem;
+    height: 2px;
+    background-color: var(--clrs-neutral-800);
+    position: absolute;
+    right: 0;
+  }
+  .hamburger::after {
+    top: -1rem;
+  }
+  .hamburger::before {
+    bottom: -1rem;
+    transition: transform 250ms, bottom 250ms 250ms;
+  }
+
+  /* STYLING FOR MENU OPEN HAMBURGER */
+  .open.hamburger {
+    transform: rotate(135deg);
+    transition: transform 250ms;
+    background-color: var(--clrs-neutral-100);
+  }
+  .open.hamburger::after {
+    opacity: 0;
+    transition: opacity 250ms;
+  }
+  .open.hamburger::before {
+    bottom: -0rem;
+    transform: rotate(90deg);
+    transition: transform 250ms 250ms, bottom 250ms;
+    background-color: var(--clrs-neutral-100);
+  }
+
+  /* STYLING OF OVERLAY BELOW NAVIGATION MENU */
+  .overlay {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--clrs-neutral-800);
+    opacity: 0.6;
+    position: absolute;
+    left: 0%;
+    top: 0;
+    opacity: 0;
+    z-index: -1;
+    transition: all 300ms;
+  }
+  /* STYLING FOR OVERLAY WHEN MENU IS OPEN */
+  .open.overlay {
+    opacity: 0.6;
+    z-index: 10;
+  }
+  /* STYLING FOR THE NAVIGATION MENU */
+  .navigation__list {
+    margin: 0;
+    width: 0%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3.2rem;
+    background-color: var(--clrs-secondary-600);
+    padding: 3.2rem;
+    z-index: -1;
+    opacity: 0;
+    transition: all 300ms;
+  }
+
+  /* STYLING FOR OPENED NAVIGATION MENU */
+  .open.navigation__list {
+    width: 50%;
+    opacity: 1;
+    z-index: 20;
+  }
+  .navigation__item {
+    color: var(--clrs-neutral-100);
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 34.375em) {
+  .open.navigation__list {
+    width: 75%;
+  }
+}
