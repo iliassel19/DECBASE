@@ -28,6 +28,7 @@
 html {
   font-size: 62.5%;
   font-family: var(--ff-base);
+  scroll-behavior: smooth;
 }
 img {
   width: 100%;
@@ -53,6 +54,7 @@ h1 {
 }
 
 .container {
+  background-color: var(--clrs-neutral-200);
   max-width: 138rem;
   min-height: 100vh;
   margin-inline: auto;
@@ -62,27 +64,6 @@ h1 {
 .hamburger,
 .overlay {
   display: none;
-}
-
-.btn {
-  color: var(--clrs-neutral-100);
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  font-weight: 500;
-  padding: 1rem 2rem;
-  background-color: var(--clrs-primary-500);
-  border-top-left-radius: 2.4rem;
-  border-bottom-right-radius: 2.4rem;
-  transition: background-color 250ms;
-}
-.btn:hover {
-  background-color: var(--clrs-primary-700);
-}
-.btn-secondary {
-  background-color: var(--clrs-secondary-600);
-}
-.btn-secondary:hover {
-  background-color: var(--clrs-secondary-400);
 }
 
 /* NAVIGATION STYLING */
@@ -122,4 +103,24 @@ h1 {
 }
 .clicked {
   color: var(--clrs-neutral-400);
+}
+.btn {
+  color: var(--clrs-neutral-100);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  background-color: var(--clrs-primary-500);
+  border-top-left-radius: 2.4rem;
+  border-bottom-right-radius: 2.4rem;
+  transition: background-color 250ms;
+}
+.btn:hover {
+  background-color: var(--clrs-primary-700);
+}
+.btn-secondary {
+  background-color: var(--clrs-secondary-600);
+}
+.btn-secondary:hover {
+  background-color: var(--clrs-secondary-400);
 }
